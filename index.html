@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<div class="container">
-		<div id="buttons"></div>
-		<div id="messages"></div>
+		<h1 id="number-round" hidden>Runda : 1</h1>
+		<button id="btn-start">Start</button>
+		<button id="btn-new-game" hidden>Nowa Gra</button>
+		<button id="btn-stone" hidden>Kamień</button>
+		<button id="btn-paper" hidden>Papier</button>
+		<button id="btn-scissors" hidden>Nożyce</button>
+		<h3 id="player-move" hidden>Gracz: Wybierz</h3>
+		<h3 id="computer-move" hidden>Komputer: Losuje</h3>
+		<h5 id="player-score" hidden>Punkty Gracz: 0</h5>
+		<h5 id="computer-score" hidden>Punkty Komputer: 0</h5>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>
