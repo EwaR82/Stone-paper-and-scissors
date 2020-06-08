@@ -1,0 +1,128 @@
+
+// var
+$color-bg:RGB(146, 210, 238);
+$color-shadow:white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  background-color:$color-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.header {
+  width: auto;
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    margin: 50px;
+
+  }
+}
+
+.main {
+  text-align: center;
+
+  #wins-wins {
+    font-size: 40px;
+    color: red;
+    margin: 50px 0;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.main__score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  h3 {
+    margin: 50px 100px 50px;
+  }
+}
+
+#img-vs {
+  margin: 0 34px;
+}
+
+#welcome-game{
+  font-size: 45px;
+}
+
+#number-round {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 55px;
+}
+
+#btn-start {
+  width: 250px;
+  height: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 5px $color-shadow;
+  display: block;
+}
+
+
+#btn-stone {
+  border: none;
+  background-color: $color-bg;
+  margin: 20px;
+
+}
+
+
+#btn-paper {
+  border: none;
+  background-color: $color-bg;
+  margin: 20px;
+
+}
+
+#btn-scissors {
+  border: none;
+  background-color: $color-bg;
+  margin: 20px;
+}
+
+#btn-new-game {
+  width: 250px;
+  height: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  box-shadow: 3px 3px 5px $color-shadow;
+}
+
+#player-score,
+#computer-score {
+  font-size: 25px;
+}
+

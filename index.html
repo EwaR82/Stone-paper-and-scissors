@@ -4,24 +4,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 	<div class="container">
-		<h1 id="number-round" hidden>Runda : 1</h1>
-		<button id="btn-start">Start</button>
-		<button id="btn-new-game" hidden>Nowa Gra</button>
-		<button id="btn-stone" hidden>Kamień</button>
-		<button id="btn-paper" hidden>Papier</button>
-		<button id="btn-scissors" hidden>Nożyce</button>
-		<h3 id="player-move" hidden>Gracz: Wybierz</h3>
-		<h3 id="computer-move" hidden>Komputer: Losuje</h3>
-		<h5 id="player-score" hidden>Punkty Gracz: 0</h5>
-		<h5 id="computer-score" hidden>Punkty Komputer: 0</h5>
+		<div class="header">
+			<h1 id="welcome-game">Witaj w Grze !!!</h1>
+			<img id="img-all" src="./images/PKM.png" alt="">
+			<button id="btn-start">Start</button>
+		</div>
+		<div class="main">
+			<h1 id="number-round" hidden>Runda : 1</h1>
+			<button id="btn-new-game" hidden>Nowa Gra</button>
+			<button id="btn-stone" hidden><img src="./images/KamienGracz.png" alt="Kamień"> </button>
+			<button id="btn-scissors" hidden><img src="./images/NozyceGracz.png" alt="nożyce"> </button>
+			<button id="btn-paper" hidden><img src="./images/PapierGracz.png" alt="papier"> </button>
+			<img id="img-vs" src="./images/vs.png" alt="vs" hidden>
+			<img id="img-stone-attack" src="./images/KamienKomp.png" alt="Kamien" hidden>
+			<img id="img-scissors-attack" src="./images/NozyceKomp.png" alt="Nożyce" hidden>
+			<img id="img-paper-attack" src="./images/PapierKomp.png" alt="Papier" hidden>
+			<h3 id="wins-wins" hidden>Komputer: Losuje</h3>
+			<div class="main__score">
+				<h3 id="player-score" hidden>Punkty Gracza : 0</h3>
+				<h3 id="computer-score" hidden>Punkty Komputera : 0</h3>
+			</div>
+		</div>
 	</div>
-	<script src="js/functions.js"></script>
-	<script src="js/script.js"></script>
+	<script src="./js/functions.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
