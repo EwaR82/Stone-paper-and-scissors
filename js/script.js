@@ -2,8 +2,8 @@
 let scorePlayer = 0;
 let scoreComputer = 0;
 const moveName = ['kamień', 'papier', 'nożyce'];
-let playerMove;
-let computerMove;
+// let playerMove;
+// let computerMove;
 let numberRound = 1;
 
 // akacja dla START
@@ -28,7 +28,7 @@ document.getElementById('btn-stone').addEventListener('click', function () {
     document.getElementById('btn-paper').hidden = true;
     document.getElementById('btn-scissors').hidden = true;
     document.getElementById('img-vs').hidden = false;
-    playerMove = 'kamień';
+    const playerMove = 'kamień';
     playerVsComputer(playerMove);
   }
 });
@@ -38,7 +38,7 @@ document.getElementById('btn-paper').addEventListener('click', function () {
     document.getElementById('btn-stone').hidden = true;
     document.getElementById('btn-scissors').hidden = true;
     document.getElementById('img-vs').hidden = false;
-    playerMove = 'papier';
+    const playerMove = 'papier';
     playerVsComputer(playerMove);
   }
 });
@@ -48,7 +48,7 @@ document.getElementById('btn-scissors').addEventListener('click', function () {
     document.getElementById('btn-stone').hidden = true;
     document.getElementById('btn-paper').hidden = true;
     document.getElementById('img-vs').hidden = false;
-    playerMove = 'nożyce';
+    const playerMove = 'nożyce';
     playerVsComputer(playerMove);
   }
 });

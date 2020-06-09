@@ -2,7 +2,7 @@
 	function playerVsComputer(argPlayerMove) {
 
 		const randomNumber = Math.floor(Math.random() * 3);
-		computerMove = moveName[randomNumber];
+		const computerMove = moveName[randomNumber];
 		//sprawdzanie jaki pokzać obrazek dla ruchu komputera
 		if (computerMove === 'kamień') {
 			document.getElementById('img-stone-attack').hidden = false;
