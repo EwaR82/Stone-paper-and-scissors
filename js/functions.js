@@ -1,7 +1,7 @@
 	//funkcja gracz kontra komputer
 	function playerVsComputer(argPlayerMove) {
 
-		randomNumber = Math.floor(Math.random() * 3);
+		const randomNumber = Math.floor(Math.random() * 3);
 		computerMove = moveName[randomNumber];
 		//sprawdzanie jaki pokzać obrazek dla ruchu komputera
 		if (computerMove === 'kamień') {

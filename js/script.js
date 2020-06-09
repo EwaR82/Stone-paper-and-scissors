@@ -1,10 +1,9 @@
 //var
 let scorePlayer = 0;
 let scoreComputer = 0;
-let moveName = ['kamień', 'papier', 'nożyce'];
+const moveName = ['kamień', 'papier', 'nożyce'];
 let playerMove;
 let computerMove;
-let randomNumber;
 let numberRound = 1;
 
 // akacja dla START
