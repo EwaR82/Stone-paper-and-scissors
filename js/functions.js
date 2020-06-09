@@ -1,52 +1,52 @@
 	//funkcja gracz kontra komputer
 	function playerVsComputer(argPlayerMove) {
-
+		//  losowanie ruchu komputera
 		const randomNumber = Math.floor(Math.random() * 3);
 		const computerMove = moveName[randomNumber];
-		//sprawdzanie jaki pokzać obrazek dla ruchu komputera
+		//sprawdzanie jaki pokazać obrazek dla ruchu komputera
 		if (computerMove === 'kamień') {
-			document.getElementById('img-stone-attack').hidden = false;
+			imgStoneAttackId.hidden = false;
 		}
 		if (computerMove === 'papier') {
-			document.getElementById('img-paper-attack').hidden = false;
+			imgPaperAttackId.hidden = false;
 		}
 		if (computerMove === 'nożyce') {
-			document.getElementById('img-scissors-attack').hidden = false;
+			imgScissorsAttackId.hidden = false;
 		}
-		// sprawdzanie kto wygrał
+		// sprawdza kto wygrał i daje punkt
 		whoWins = displayResult(computerMove, argPlayerMove);
 		if (whoWins === 'Wygrałeś!!') {
 			scorePlayer++;
-			document.getElementById('player-score').innerHTML = 'Punkty Gracza : ' + scorePlayer;
-			document.getElementById('player-score').style.color = "green";
+			playerScoreId.innerHTML = 'Punkty Gracza : ' + scorePlayer;
+			playerScoreId.style.color = "green";
 		}
 		if (whoWins === 'Przegrałeś!!') {
 			scoreComputer++;
-			document.getElementById('computer-score').innerHTML = 'Punkty Komputera : ' + scoreComputer;
-			document.getElementById('computer-score').style.color = "green";
+			computerScoreId.innerHTML = 'Punkty Komputera : ' + scoreComputer;
+			computerScoreId.style.color = "green";
 		}
 		if (whoWins === 'Remis') {
 			scorePlayer++;
-			document.getElementById('player-score').innerHTML = 'Punkty Gracza : ' + scorePlayer;
-			document.getElementById('player-score').style.color = "green";
+			playerScoreId.innerHTML = 'Punkty Gracza : ' + scorePlayer;
+			playerScoreId.style.color = "green";
 			scoreComputer++;
-			document.getElementById('computer-score').innerHTML = 'Punkty Komputera : ' + scoreComputer;
-			document.getElementById('computer-score').style.color = "green";
+			computerScoreId.innerHTML = 'Punkty Komputera : ' + scoreComputer;
+			computerScoreId.style.color = "green";
 		}
 		numberRound++;
-		//co ma się dziać po X czasie 
+		//co ma się dziać po X czasie
 		setTimeout(function () {
 			//zresetuj obrazy gracza i komputera
-			document.getElementById('number-round').innerHTML = 'Runda : ' + numberRound;
-			document.getElementById('btn-stone').hidden = false;
-			document.getElementById('btn-paper').hidden = false;
-			document.getElementById('btn-scissors').hidden = false;
-			document.getElementById('img-stone-attack').hidden = true;
-			document.getElementById('img-paper-attack').hidden = true;
-			document.getElementById('img-scissors-attack').hidden = true;
-			document.getElementById('img-vs').hidden = true;
-			document.getElementById('player-score').style.color = "black";
-			document.getElementById('computer-score').style.color = "black";
+			numberRoundId.innerHTML = 'Runda : ' + numberRound;
+			btnStoneId.hidden = false;
+			btnPaperId.hidden = false;
+			btnScissorsId.hidden = false;
+			imgStoneAttackId.hidden = true;
+			imgPaperAttackId.hidden = true;
+			imgScissorsAttackId.hidden = true;
+			imgVsId.hidden = true;
+			playerScoreId.style.color = "black";
+			computerScoreId.style.color = "black";
 			//sprawdzanie czy koniec rund - max 5
 			if (numberRound >= 6) {
 				endGame()
@@ -55,24 +55,24 @@
 	}
 	//funkcja Koniec Gry
 	function endGame() {
-		document.getElementById('number-round').innerHTML = 'Koniec Gry  !!!';
-		//sprawdzanie kto wygrał GRĘ
+		numberRoundId.innerHTML = 'Koniec Gry  !!!';
+		//sprawdza kto wygrał GRĘ
 		if (scorePlayer > scoreComputer) {
-			document.getElementById('wins-wins').innerHTML = 'Wygrałeś   ;-) !!! Gratulacje !!!';
-			document.getElementById('wins-wins').hidden = false;
+			winsWinsId.innerHTML = 'Wygrałeś   ;-) !!! Gratulacje !!!';
+			winsWinsId.hidden = false;
 		} else if (scorePlayer < scoreComputer) {
-			document.getElementById('wins-wins').innerHTML = 'Przegrałeś   :-( !!!';
-			document.getElementById('wins-wins').hidden = false;
+			winsWinsId.innerHTML = 'Przegrałeś   :-( !!!';
+			winsWinsId.hidden = false;
 		} else {
-			document.getElementById('wins-wins').innerHTML = 'Remis !!!';
-			document.getElementById('wins-wins').hidden = false;
+			winsWinsId.innerHTML = 'Remis !!!';
+			winsWinsId.hidden = false;
 		}
 		//daje możliwość rozpoczęcia od nowa
-		document.getElementById('btn-start').hidden = true;
-		document.getElementById('btn-stone').hidden = true;
-		document.getElementById('btn-paper').hidden = true;
-		document.getElementById('btn-scissors').hidden = true;
-		document.getElementById('btn-new-game').hidden = false;
+		btnStartId.hidden = true;
+		btnStoneId.hidden = true;
+		btnPaperId.hidden = true;
+		btnScissorsId.hidden = true;
+		btnNewGameId.hidden = false;
 	}
 
 	//funkcja sprawdza kto wygrał w danej rundzie

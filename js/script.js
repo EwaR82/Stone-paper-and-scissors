@@ -1,72 +1,86 @@
 //var
 let scorePlayer = 0;
 let scoreComputer = 0;
-const moveName = ['kamień', 'papier', 'nożyce'];
-// let playerMove;
-// let computerMove;
 let numberRound = 1;
+const moveName = ['kamień', 'papier', 'nożyce'];
+const numberRoundId = document.getElementById('number-round');
+const btnStartId = document.getElementById('btn-start');
+const btnStoneId = document.getElementById('btn-stone');
+const btnPaperId = document.getElementById('btn-paper');
+const btnScissorsId = document.getElementById('btn-scissors');
+const winsWinsId = document.getElementById('wins-wins');
+const playerScoreId = document.getElementById('player-score');
+const computerScoreId = document.getElementById('computer-score');
+const btnNewGameId = document.getElementById('btn-new-game');
+const welcomeGameId = document.getElementById('welcome-game');
+const imgAllId = document.getElementById('img-all');
+const imgVsId = document.getElementById('img-vs');
+const imgStoneAttackId = document.getElementById('img-stone-attack');
+const imgPaperAttackId = document.getElementById('img-paper-attack');
+const imgScissorsAttackId = document.getElementById('img-scissors-attack');
 
 // akacja dla START
-document.getElementById('btn-start').addEventListener('click', function () {
-  document.getElementById('number-round').hidden = false;
-  document.getElementById('welcome-game').hidden = true;
-  document.getElementById('btn-start').hidden = true;
-  document.getElementById('btn-stone').hidden = false;
-  document.getElementById('btn-paper').hidden = false;
-  document.getElementById('btn-scissors').hidden = false;
-  document.getElementById('wins-wins').hidden = true;
-  document.getElementById('player-score').hidden = false;
-  document.getElementById('computer-score').hidden = false;
-  document.getElementById('img-all').hidden = true;
-  document.getElementById('img-vs').hidden = true;
+btnStartId.addEventListener('click', function () {
+  numberRoundId.hidden = false;
+  welcomeGameId.hidden = true;
+  btnStartId.hidden = true;
+  btnStoneId.hidden = false;
+  btnPaperId.hidden = false;
+  btnScissorsId.hidden = false;
+  winsWinsId.hidden = true;
+  playerScoreId.hidden = false;
+  computerScoreId.hidden = false;
+  imgAllId.hidden = true;
+  imgVsId.hidden = true;
 });
 
 //akcja dla KAMIEŃ
-document.getElementById('btn-stone').addEventListener('click', function () {
+btnStoneId.addEventListener('click', function () {
   if (numberRound <= 5) {
-    document.getElementById('btn-paper').hidden = true;
-    document.getElementById('btn-scissors').hidden = true;
-    document.getElementById('img-vs').hidden = false;
+    btnPaperId.hidden = true;
+    btnScissorsId.hidden = true;
+    imgVsId.hidden = false;
     const playerMove = 'kamień';
     playerVsComputer(playerMove);
   }
 });
 //akcja dla PAPIER
-document.getElementById('btn-paper').addEventListener('click', function () {
+btnPaperId.addEventListener('click', function () {
   if (numberRound <= 5) {
-    document.getElementById('btn-stone').hidden = true;
-    document.getElementById('btn-scissors').hidden = true;
-    document.getElementById('img-vs').hidden = false;
+    btnStoneId.hidden = true;
+    btnScissorsId.hidden = true;
+    imgVsId.hidden = false;
     const playerMove = 'papier';
     playerVsComputer(playerMove);
   }
 });
 //akcja dla NOŻYCE
-document.getElementById('btn-scissors').addEventListener('click', function () {
+btnScissorsId.addEventListener('click', function () {
   if (numberRound <= 5) {
-    document.getElementById('btn-stone').hidden = true;
-    document.getElementById('btn-paper').hidden = true;
-    document.getElementById('img-vs').hidden = false;
+    btnStoneId.hidden = true;
+    btnPaperId.hidden = true;
+    imgVsId.hidden = false;
     const playerMove = 'nożyce';
     playerVsComputer(playerMove);
   }
 });
 //akcja dla nowa GRA
-document.getElementById('btn-new-game').addEventListener('click', function () {
+btnNewGameId.addEventListener('click', function () {
   scorePlayer = 0;
   scoreComputer = 0;
   numberRound = 1;
-  document.getElementById('number-round').hidden = false;
-  document.getElementById('btn-start').hidden = true;
-  document.getElementById('btn-stone').hidden = false;
-  document.getElementById('btn-paper').hidden = false;
-  document.getElementById('btn-scissors').hidden = false;
-  document.getElementById('wins-wins').hidden = true;
-  document.getElementById('player-score').hidden = false;
-  document.getElementById('computer-score').hidden = false;
-  document.getElementById('btn-new-game').hidden = true;
-  document.getElementById('player-score').innerHTML = 'Punkty Gracza : 0';
-  document.getElementById('computer-score').innerHTML = 'Punkty Komputera : 0';
-  document.getElementById('number-round').innerHTML = 'Runda : 1';
-  document.getElementById('wins-wins').innerHTML = '-';
+  numberRoundId.hidden = false;
+  numberRoundId.innerHTML = 'Runda : 1';
+  btnStartId.hidden = true;
+  btnStoneId.hidden = false;
+  btnPaperId.hidden = false;
+  btnScissorsId.hidden = false;
+  winsWinsId.hidden = true;
+  winsWinsId.innerHTML = '-';
+  playerScoreId.hidden = false;
+  playerScoreId.innerHTML = 'Punkty Gracza : 0';
+  computerScoreId.hidden = false;
+  computerScoreId.innerHTML = 'Punkty Komputera : 0';
+  btnNewGameId.hidden = true;
+
 });
