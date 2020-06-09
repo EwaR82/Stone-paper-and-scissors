@@ -11,7 +11,6 @@ document.getElementById('btn-start').addEventListener('click', function () {
   document.getElementById('number-round').hidden = false;
   document.getElementById('welcome-game').hidden = true;
   document.getElementById('btn-start').hidden = true;
-  document.getElementById('btn-start').style.display = 'none';
   document.getElementById('btn-stone').hidden = false;
   document.getElementById('btn-paper').hidden = false;
   document.getElementById('btn-scissors').hidden = false;
