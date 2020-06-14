@@ -88,6 +88,10 @@
   box-shadow: 3px 3px 5px white;
 }
 
+.img-game {
+  transform: scaleX(-1);
+}
+
 #btn-stone {
   border: none;
   background-color: RGB(146, 210, 238);
@@ -121,5 +125,13 @@
 #player-score,
 #computer-score {
   font-size: 25px;
+}
+
+.round-winner {
+  color: green;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
